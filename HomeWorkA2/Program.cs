@@ -247,6 +247,7 @@ namespace HomeWorkA2
             //    Console.Write($"{arr[i]} ");
 
             //return arr[b - 1];
+            return 0;
         }
 
         /// <summary>
