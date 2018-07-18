@@ -231,23 +231,27 @@ namespace HomeWorkA2
                 SupportMethods.Pause($"Qty of programs: 1");
         }
 
+        /// <summary>
+        /// Method Calculation using array
+        /// </summary>
+        /// <param name="a">from</param>
+        /// <param name="b">to</param>
+        /// <returns>qty programs</returns>
         static int CalcArray(int a, int b)
         {
-            //int[] arr = new int[b];
-            ////arr[a - 1] = 0;
-            ////arr[a] = 1;
+            int[] arr = new int[b + 1];
+            arr[a] = 1;            
 
-            //for (int i = 1; i < b; i++)
-            //{
-            //    if (i % 2 != 0) arr[i] = arr[i - 1];
-            //    else arr[i] = arr[i - 1] + 1;
-            //}
+            for (int i = a + 1; i <= b; i++)
+            {
+                if (i % 2 == 0) arr[i] = arr[i - 1] + arr[i / 2];
+                else arr[i] = arr[i - 1];
+            }
 
-            //for (int i = 0; i < b; i++)
-            //    Console.Write($"{arr[i]} ");
+            //for (int j = 1; j <= b; j++)
+            //    Console.Write($"{arr[j]} ");
 
-            //return arr[b - 1];
-            return 0;
+            return arr[b];
         }
 
         /// <summary>
